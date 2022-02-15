@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../Resources/main_page.css">
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <div class="navigation">
+        <nav class="navbar navbar-expand-lg ">
+            <a class="navbar-brand"  href="../index.html">Latitude</a>
+            <button class="navbar-toggler navbar-dark " type="button" data-toggle="collapse" data-target="#navbarNavDropdown" 
+               aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            PLOTS
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="temperature.html">Max Temperature</a>
+                            <a class="dropdown-item" href="humidity.html">Humidity</a>
+                            <a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
+                            <a class="dropdown-item" href="wind.html">Wind Speed</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="comparison.html">COMPARISON</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="data.html">DATA</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-md-12">
+                <div class="box" style="padding-bottom: 20px;">
+                    <h3 class="title">Cloudiness</h3>
+                    <hr>
+                    <img src="../assets/images/Latitude_vs_Cloudiness.png" class=" rounded image_page img-fluid"  alt="Humidity Graph">
+                    <p><strong>Cloudiness VS Latitude,</strong> this figure is the result of scatter plotting the cleaned date frame for
+                        cloudiness percentage that were recorded over the world on 10/01/2022, the city latitude coordinate being used as x 
+                        axis while the city cloudiness is used as y axis.
+                        <br>
+                        the results shows that:
+                        <ul style="color:black;">
+                            <li>
+                                The southern hemisphere (between (0 to -20)) looks has more clouds than the 
+                                northern hemisphere, however we can see more clouds in the northern hemisphere between (35 to 75).
+                            </li>
+                            <li>
+                                <strong>symmetric distribution, Latitude has not much impact on Cloudiness</strong>
+                                at the time that the data have been collected, and we can see more results for cities higher the latitude 40 
+                                as the northern hemisphere has more cities data than the Southern hemisphere cities
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-5 col-lg-5">
+                <div class="box">
+                    <h3 class="title">Visualizations</h3>
+                    <hr>
+                    
+                        
+                       
+                    <text style="color:black;" >  Click any plot to get an in depth analysis.<br></text>
+                    <div class="container">
+                        <div class="row" >
+                            
+                                
+                            <a href="temperature.html">
+                            <img class="image_panel" title="Latitude vs Temperature" src="../assets/images/Latitude_vs_Temperature.png" alt="Max Temperature Graph">
+                            </a>
+                        
+                            <a href="humidity.html">
+                            <img class="image_panel" title="Latitude vs humidity" src="../assets/images/Latitude_vs_Humidity.png" alt="Humidity Graph">
+                            </a>
+                        
+                            <a href="cloudiness.html">
+                            <img class="image_panel" title="Latitude vs Cloudiness" src="../assets/images/Latitude_vs_Cloudiness.png" alt="Cloudiness Graph">
+                            </a>
+                            
+                            <a href="wind.html">
+                                <img class="image_panel" title="Latitude vs Wind Speed" src="../assets/images/Latitude_vs_WindSpeed.png" alt="Wind Speed Graph">
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer> Web Design Challenge - Hatim Mansor </footer>
+</body>
+</html>
